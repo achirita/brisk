@@ -5,10 +5,10 @@ var Game = (function () {
 
   var initialize = function(element) {
     svg = SVG(element);
+    svg.viewbox(0, 0, 100, 100);
   };
 
   var changeView = function(view) {
-    console.log("changing view");
     if(currentView) {
       currentView.destroy();
     }
