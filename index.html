@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- allows the page to go full screen if added to the home screen from Chrome -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    -->
+    <script src="js/lib/svg.min.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/views/show-pattern.js"></script>
+    <script src="js/views/draw-pattern.js"></script>
+  </head>
+  <body>
+    <div id="game"></div>
+    <script>
+      //var rect = draw.rect(100, 100).fill('#f06').move(20, 20)
+      Game.initialize('game');
+      Game.changeView(new Game.Views.ShowPattern(Game));
+    </script>
+  </body>
+</html>
