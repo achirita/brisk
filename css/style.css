@@ -1,5 +1,20 @@
-html, body { 
-  margin: 0; 
+html, body {
+  margin: 0;
   padding: 0;
   background-color: #FFF8F0;
+}
+
+.circle {
+    fill: #FF0066;
+}
+
+.path {
+    fill: none;
+    stroke: #FF0066;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.level-bg {
+    fill: #E8E1DA;
 }
