@@ -28,13 +28,14 @@
 	  //create a path between the shuffled vertices and animate it
 	  var path = context.draw().path(toPath(vertices)).attr(context.Styles.Path);
 	  path.stroke({dasharray: path.length(), dashoffset: path.length()});
-	  path.animate(1500).attr({'stroke-dashoffset': 0});
-	  
-	  //context.changeView(new context.Views.DrawPattern());
+	  path.animate(1500).attr({'stroke-dashoffset': 0}).after(function() {
+		vertices.shift();
+		context.changeView(new context.Views.DrawPattern(context), vertices);
+	  });
     };
 
     this.destroy = function() {
-      console.log("no longer showing pattern");
+      context.draw().clear();
     };
 
   };

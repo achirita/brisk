@@ -9,12 +9,12 @@ var Game = (function () {
     svg.viewbox(0, 0, 360, 640);
   };
 
-  var changeView = function(view) {
+  var changeView = function(view, data) {
     if(currentView) {
       currentView.destroy();
     }
     currentView = view;
-    currentView.create();
+    currentView.create(data);
   };
 
   var draw = function() {

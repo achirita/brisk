@@ -2,7 +2,7 @@
 
   Styles.Circle = {
 	fill: '#f06', 
-	r: '4%'
+	r: '20'
   };
   
   Styles.Path = {
